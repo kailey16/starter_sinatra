@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+</head>
+<body>
+    <h1>Museums</h1>
+    <% @museums.each do |museum| %>
+        <p><a href= "/museums/<%= museum.id %>"><%= museum.name %></a></p>
+    <% end %>
+
+    <a href='/museums/new'>Create a New Museum</a>
+
+</body>
+</html>

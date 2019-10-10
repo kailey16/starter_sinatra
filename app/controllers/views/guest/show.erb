@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Guest</title>
+</head>
+<body>
+    <p>Name: <%= @guest.name %></p>
+    <p>Age: <%= @guest.age %></p>
+    <p>Gender: <%= @guest.gender %></p>
+
+    <p><a href= '/guests/<%= @guest.id %>/edit'>Edit</a></p>
+
+    <p><a href= '/guests'>Go back to index</a></p>
+
+    <p><form method="POST" action="/guests/<%= @guest.id %>">
+        <input type="hidden" name="_method" value="DELETE">
+        <input type="submit" value="Delete">
+    </form></p>
+
+</body>
+</html>

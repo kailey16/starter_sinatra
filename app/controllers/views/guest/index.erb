@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+</head>
+<body>
+    <h1>Guests</h1>
+    <% @guests.each do |guest| %>
+        <p><a href= "/guests/<%= guest.id %>"><%= guest.name %></a></p>
+    <% end %>
+    <a href='/guests/new'>Create a New Guest</a>
+</body>
+</html>

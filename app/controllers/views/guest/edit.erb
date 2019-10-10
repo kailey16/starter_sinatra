@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+</head>
+<body>
+    <form method= "POST" action="/guests/<%= @guest.id %>">
+        <input type="hidden" name="_method" value="PATCH">
+        <label for="name">Name:</label>
+        <input type="text" name="name" value="<%= @guest.name %>">
+        <label for="age">Age:</label>
+        <input type="text" name="age" value="<%= @guest.age %>">
+        <label for="gender">Gender:</label>
+        <input type="text" name="gender" value="<%= @guest.gender %>">
+        <input type="submit" value="Edit">
+    </form>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Museum</title>
+</head>
+<body>
+    <p>Name: <%= @museum.name %></p>
+    <p>Location: <%= @museum.location %></p>
+
+    <p><a href= '/museums/<%= @museum.id %>/edit'>Edit</a></p>
+
+    <p><a href= '/museums'>Go back to index</a></p>
+
+    <p><form method="POST" action="/museums/<%= @museum.id %>">
+        <input type="hidden" name="_method" value="DELETE">
+        <input type="submit" value="Delete">
+    </form></p>
+
+</body>
+</html>
